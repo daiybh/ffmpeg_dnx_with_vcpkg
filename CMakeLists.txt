@@ -7,7 +7,7 @@ project(ffmpeg_with_vcpkg CXX)
 find_package(ffmpeg  REQUIRED)
 find_package(fmt CONFIG REQUIRED)
 
-add_executable(x x.cpp )
+add_executable(x main.cpp )
 target_link_libraries(x PRIVATE fmt::fmt)
 target_include_directories(x PRIVATE ${FFMPEG_INCLUDE_DIRS})
 target_link_directories(x PRIVATE ${FFMPEG_LIBRARY_DIRS})
